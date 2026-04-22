@@ -2,7 +2,7 @@ import { executeQuery } from "../../utils/dbQuery";
 import { AppError } from "../../utils/ErrorHandler";
 import { createAccessToken, createRefreshToken } from "../../utils/jwt";
 import { comaparePassword, hashPassword } from "../../utils/password";
-import { LoginUserInput, RegisterUserInput } from "./auth.schema";
+import { LoginUserInput, RegisterUserInput } from "../../Schema/auth.schema";
 
 export const RegisterUser = async (data: RegisterUserInput) => {
   const { name, email, password, avatar, default_currency, auth_provider } =
