@@ -3,10 +3,11 @@ import dotenv from "dotenv";
 import pool from "./utils/db";
 import cookieparser from "cookie-parser";
 import { GlobalErrorHandler } from "./middleware/ErrorMiddleware";
-import authRouter from "./modules/Auth/auth.route";
 import cors from "cors";
 import passport from "passport";
 import "./config/passport";
+import authRouter from "./modules/Auth/auth.route";
+import userRouter from "./modules/users/user.route";
 
 dotenv.config();
 pool.connect();
@@ -25,6 +26,7 @@ app.use(cookieparser());
 
 // mount the all routes
 app.use("/auth", authRouter);
+app.use("/users", userRouter);
 
 const PORT = process.env.PORT || 5000;
 

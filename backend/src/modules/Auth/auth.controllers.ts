@@ -4,7 +4,7 @@ import {
   LoginUserInput,
   registerSchema,
   RegisterUserInput,
-} from "./auth.schema";
+} from "../../Schema/auth.schema";
 import { loginUser, RegisterUser } from "./auth.services";
 import { executeQuery } from "../../utils/dbQuery";
 import { AppError } from "../../utils/ErrorHandler";
